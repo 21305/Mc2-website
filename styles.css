@@ -614,3 +614,6 @@ body {
 @media (max-width: 768px) {
     .service-category, .reverse { flex-direction: column; text-align: center; }
 }
+.nav-link {
+  color: white;
+}
