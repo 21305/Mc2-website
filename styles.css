@@ -617,3 +617,6 @@ body {
 .nav-link {
   color: white;
 }
+.nav-link active-nav{
+ color: white;
+}
