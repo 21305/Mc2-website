@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC² | Productos tecnológicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logocuare.ico">
+</head>
+<body>
+
+<header class="header">
+    <a href="inicio.html" class="logo"><img src="logo.png" alt="MC²"></a>
+    <ul class="navlist">
+        <li><a href="acerca.html" class="nav-link">ACERCA DE</a></li>
+        <li><a href="servicios.html" class="nav-link">SERVICIOS</a></li>
+        <li><a href="productos.html" class="nav-link active-nav">PRODUCTOS</a></li>
+        <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('2.jpg');"></div>
+        <div class="hero-content">
+            <h1>Productos <span>MC²</span></h1>
+            <p>Tecnología diseñada para entornos exigentes y rendimiento garantizado.</p>
+        </div>
+    </section>
+
+    <section class="products-catalog">
+        <div class="container">
+            <div class="products-grid-catalog">
+                <div class="product-card">
+                    <i class="ri-dashboard-line"></i>
+                    <h3>MC² SCADA Suite</h3>
+                    <p>Sistema de supervisión y control en tiempo real con alarmas, tendencias, informes y acceso web. Compatible con OPC UA, Modbus, Siemens, Rockwell.</p>
+                    <span class="badge">Disponible</span>
+                </div>
+                <div class="product-card">
+                    <i class="ri-radar-line"></i>
+                    <h3>IoT Edge Gateway</h3>
+                    <p>Gateway industrial robusto con conectividad 4G/Ethernet, almacenamiento local y sincronización con AWS/Azure. Ideal para monitoreo remoto.</p>
+                    <span class="badge">Preventa</span>
+                </div>
+                <div class="product-card">
+                    <i class="ri-smartphone-line"></i>
+                    <h3>MC² Mobile HMI</h3>
+                    <p>Aplicación multiplataforma para operadores y supervisores. Visualización de KPIs, gráficas y notificaciones push.</p>
+                    <span class="badge">Disponible</span>
+                </div>
+                <div class="product-card">
+                    <i class="ri-cpu-line"></i>
+                    <h3>PLC compacto MC²-C100</h3>
+                    <p>Controlador lógico programable con entradas/salidas integradas, puerto Ethernet y comunicación CANopen. Ideal para máquinas autónomas.</p>
+                    <span class="badge">Próximamente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-contact">
+        <div class="container">
+            <div class="contact-prompt">
+                <h2>¿Buscas un producto personalizado?</h2>
+                <p>Diseñamos soluciones a tu medida. Consúltanos sin compromiso.</p>
+                <a href="contacto.html" class="btn-primary">Hablar con un asesor</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col"><h4>MC²</h4><p>Ingeniería, desarrollo y automatización.</p><div class="footer-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-facebook-circle-fill"></i></a><a href="#"><i class="ri-linkedin-fill"></i></a></div></div>
+        <div class="footer-col"><h4>Explorar</h4><ul><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="productos.html">Productos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Aviso de privacidad</a></li><li><a href="#">Términos de uso</a></li></ul></div>
+        <div class="footer-col"><h4>Oficina</h4><address><i class="ri-map-pin-line"></i> Privada 5ta. Avenida 125, Fraccionamiento Gamez<br><i class="ri-mail-line"></i> <a href="mailto:martin.cansino@mccuadrada.com">martin.cansino@mccuadrada.com</a></address></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 MC² — Innovación y tecnología.</p></div>
+</footer>
+
+<script>
+    const header = document.querySelector('.header');
+    const menuIcon = document.getElementById('menu-icon');
+    const navlist = document.querySelector('.navlist');
+    window.addEventListener('scroll', () => header.classList.toggle('sticky', window.scrollY > 20));
+    menuIcon.onclick = () => { menuIcon.classList.toggle('bx-x'); navlist.classList.toggle('open'); };
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { menuIcon.classList.remove('bx-x'); navlist.classList.remove('open'); }));
+</script>
+</body>
+</html>

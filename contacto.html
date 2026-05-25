@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC² | Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logocuare.ico">
+</head>
+<body>
+
+<header class="header">
+    <a href="inicio.html" class="logo"><img src="logo.png" alt="MC²"></a>
+    <ul class="navlist">
+        <li><a href="acerca.html" class="nav-link">ACERCA DE</a></li>
+        <li><a href="servicios.html" class="nav-link">SERVICIOS</a></li>
+        <li><a href="productos.html" class="nav-link">PRODUCTOS</a></li>
+        <li><a href="contacto.html" class="nav-link active-nav">CONTACTO</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('1.jpg');"></div>
+        <div class="hero-content">
+            <h1>Contacta con <span>nosotros</span></h1>
+            <p>Estamos a un mensaje de distancia. Escríbenos y te responderemos en menos de 24 horas.</p>
+        </div>
+    </section>
+
+    <section class="contact-page">
+        <div class="container contact-grid">
+            <div class="contact-details-page">
+                <h2>Oficinas centrales</h2>
+                <ul>
+                    <li><i class="ri-map-pin-line"></i> Privada 5ta. Avenida 125, Fraccionamiento Gamez, México.</li>
+                    <li><i class="ri-cellphone-line"></i> Teléfono: +52 462 000 0000</li>
+                    <li><i class="ri-mail-line"></i> Email: <a href="mailto:martin.cansino@mccuadrada.com">martin.cansino@mccuadrada.com</a></li>
+                </ul>
+                <div class="map-placeholder">
+                    <iframe src="https://maps.google.com/maps?q=Privada%205ta.%20Avenida%20125%20Fraccionamiento%20Gamez&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0; border-radius: 24px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="social-contact">
+                    <a href="#"><i class="ri-instagram-line"></i> Instagram</a>
+                    <a href="#"><i class="ri-facebook-circle-fill"></i> Facebook</a>
+                    <a href="#"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/emilio2005gova@gmail.com" method="POST" class="contact-form-modern">
+                <h3>Envíanos un mensaje</h3>
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Nombre completo" required>
+                    <input type="tel" name="phone" placeholder="Teléfono">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <textarea name="mensaje" rows="5" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                </div>
+                <div class="form-legal">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
+                <button type="submit" class="btn-primary full-width">Enviar mensaje</button>
+                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col"><h4>MC²</h4><p>Ingeniería, desarrollo y automatización.</p><div class="footer-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-facebook-circle-fill"></i></a><a href="#"><i class="ri-linkedin-fill"></i></a></div></div>
+        <div class="footer-col"><h4>Explorar</h4><ul><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="productos.html">Productos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Aviso de privacidad</a></li><li><a href="#">Términos de uso</a></li></ul></div>
+        <div class="footer-col"><h4>Oficina</h4><address><i class="ri-map-pin-line"></i> Privada 5ta. Avenida 125, Fraccionamiento Gamez<br><i class="ri-mail-line"></i> <a href="mailto:martin.cansino@mccuadrada.com">martin.cansino@mccuadrada.com</a></address></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 MC² — Innovación y tecnología.</p></div>
+</footer>
+
+<script>
+    const header = document.querySelector('.header');
+    const menuIcon = document.getElementById('menu-icon');
+    const navlist = document.querySelector('.navlist');
+    window.addEventListener('scroll', () => header.classList.toggle('sticky', window.scrollY > 20));
+    menuIcon.onclick = () => { menuIcon.classList.toggle('bx-x'); navlist.classList.toggle('open'); };
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { menuIcon.classList.remove('bx-x'); navlist.classList.remove('open'); }));
+</script>
+</body>
+</html>

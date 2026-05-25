@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC² | Servicios de ingeniería y automatización</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logocuare.ico">
+</head>
+<body>
+
+<header class="header">
+    <a href="inicio.html" class="logo"><img src="logo.png" alt="MC²"></a>
+    <ul class="navlist">
+        <li><a href="acerca.html" class="nav-link">ACERCA DE</a></li>
+        <li><a href="servicios.html" class="nav-link active-nav">SERVICIOS</a></li>
+        <li><a href="productos.html" class="nav-link">PRODUCTOS</a></li>
+        <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('3.jpg');"></div>
+        <div class="hero-content">
+            <h1>Servicios <span>integrales</span></h1>
+            <p>Soluciones que impulsan tu productividad y eficiencia operativa.</p>
+        </div>
+    </section>
+
+    <section class="services-detailed">
+        <div class="container">
+            <div class="service-category">
+                <div class="service-icon"><i class="ri-robot-line"></i></div>
+                <div class="service-info">
+                    <h3>Automatización industrial</h3>
+                    <p>Diseño, programación e implementación de sistemas PLC, HMI/SCADA, robots colaborativos y visión artificial. Optimizamos procesos productivos para reducir tiempos y costos.</p>
+                    <ul>
+                        <li>✓ Migración de sistemas legacy</li>
+                        <li>✓ Mantenimiento predictivo</li>
+                        <li>✓ Integración con MES y ERP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-category reverse">
+                <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+                <div class="service-info">
+                    <h3>Desarrollo de software a medida</h3>
+                    <p>Aplicaciones de escritorio, web y móviles para la gestión de producción, trazabilidad, control de calidad y análisis de datos en tiempo real.</p>
+                    <ul>
+                        <li>✓ Dashboards interactivos</li>
+                        <li>✓ Soluciones IoT con cloud</li>
+                        <li>✓ Integración con bases de datos industriales</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-category">
+                <div class="service-icon"><i class="ri-survey-line"></i></div>
+                <div class="service-info">
+                    <h3>Consultoría en ingeniería</h3>
+                    <p>Asesoramiento técnico, auditoría energética, diseño de redes eléctricas industriales y planificación de proyectos de automatización.</p>
+                    <ul>
+                        <li>✓ Estudios de factibilidad</li>
+                        <li>✓ Selección de tecnología óptima</li>
+                        <li>✓ Capacitación al personal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <h2>¿Necesitas una solución específica?</h2>
+            <a href="contacto.html" class="btn-primary">Solicita una cotización</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col"><h4>MC²</h4><p>Ingeniería, desarrollo y automatización.</p><div class="footer-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-facebook-circle-fill"></i></a><a href="#"><i class="ri-linkedin-fill"></i></a></div></div>
+        <div class="footer-col"><h4>Explorar</h4><ul><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="productos.html">Productos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Aviso de privacidad</a></li><li><a href="#">Términos de uso</a></li></ul></div>
+        <div class="footer-col"><h4>Oficina</h4><address><i class="ri-map-pin-line"></i> Privada 5ta. Avenida 125, Fraccionamiento Gamez<br><i class="ri-mail-line"></i> <a href="mailto:martin.cansino@mccuadrada.com">martin.cansino@mccuadrada.com</a></address></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 MC² — Innovación y tecnología.</p></div>
+</footer>
+
+<script>
+    const header = document.querySelector('.header');
+    const menuIcon = document.getElementById('menu-icon');
+    const navlist = document.querySelector('.navlist');
+    window.addEventListener('scroll', () => header.classList.toggle('sticky', window.scrollY > 20));
+    menuIcon.onclick = () => { menuIcon.classList.toggle('bx-x'); navlist.classList.toggle('open'); };
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { menuIcon.classList.remove('bx-x'); navlist.classList.remove('open'); }));
+</script>
+</body>
+</html>
